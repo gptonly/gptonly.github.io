@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navation AI - Thank You</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #191A2A;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar-nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-nav li {
+      margin-left: 20px;
+    }
+
+    .navbar-nav li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav li a:hover {
+      color: #FF2AC2;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #FF2AC2;
+      margin-top: 0;
+    }
+
+    .thank-you-container {
+      margin-top: 50px;
+      display: inline-block;
+      background-image: linear-gradient(to right, #FF2AC2, #7455F0);
+      border-radius: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .thank-you-message {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    .fade-in-element {
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="/index" class="navbar-brand">Navation AI</a>
+      <ul class="navbar-nav">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+    </nav>
+    <div class="thank-you-container fade-in-element">
+      <h1>Thank You!</h1>
+      <div class="thank-you-message">
+        <p>Thanks for sending us a message! We will get back to you soon.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.fade-in-element');
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.animationDelay = i * 0.2 + 's';
+      }
+    });
+  </script>
+</body>
+</html>

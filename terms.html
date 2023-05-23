@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navation AI - Terms and Conditions</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #191A2A;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar-nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-nav li {
+      margin-left: 20px;
+    }
+
+    .navbar-nav li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav li a:hover {
+      color: #FF2AC2;
+    }
+
+    /* Terms and Conditions Styles */
+    h1 {
+      font-size: 48px;
+      color: #FF2AC2;
+      margin-top: 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .terms-content {
+      width: 100%;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .terms-section {
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fade-up 1s ease-in-out forwards;
+    }
+
+    .terms-section h2 {
+      font-size: 36px;
+      color: #FF2AC2;
+      margin-bottom: 20px;
+    }
+
+    .terms-section p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .terms-section ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .terms-section li {
+      margin-bottom: 10px;
+    }
+
+    .terms-box {
+      padding: 30px;
+      border: 8px solid #FF2AC2;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: border-color 0.5s ease;
+    }
+
+    .terms-box:hover {
+      border-color: #7455F0;
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="/index" class="navbar-brand">Navation AI</a>
+      <ul class="navbar-nav">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+    </nav>
+    <h1>Terms and Conditions</h1>
+    <div class="terms-content">
+      <div class="terms-box">
+        <div class="terms-section">
+          <h2>Intellectual Property Rights</h2>
+          <p>Other than the content you own, under these terms, Navation AI and/or its licensors own all the intellectual property rights and materials on this website. All intellectual property rights are reserved. You may access this from Navation AI for your personal use, but you must not modify, reproduce, or copy any material on Navation AI. All intellectual property rights are reserved.</p>
+        </div>
+        <div class="terms-section">
+          <h2>Restrictions</h2>
+          <p>You are specifically restricted from all of the following:</p>
+          <ul>
+            <li>Using our services for any unlawful purpose or activity.</li>
+            <li>Engaging in any data mining, data harvesting, or any other similar activity.</li>
+            <li>Using our services to engage in any advertising or marketing.</li>
+          </ul>
+        </div>
+        <div class="terms-section">
+          <h2>Disclaimer</h2>
+          <p>All the materials on Navation AI are provided "as is" without any warranty, representation, or endorsement of any kind.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.terms-section');
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.opacity = 1;
+      }
+    });
+  </script>
+</body>
+</html>

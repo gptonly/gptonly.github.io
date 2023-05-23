@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navation AI - Explore the limitless possibilities of artificial intelligence.</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #191A2A;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar-nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-nav li {
+      margin-left: 20px;
+    }
+
+    .navbar-nav li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav li a:hover {
+      color: #FF2AC2;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #FF2AC2;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #7455F0;
+      color: #fff;
+      border-radius: 50px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #FF2AC2;
+    }
+
+    .button:active {
+      transform: scale(1.1);
+    }
+
+    .image-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
+
+    .box {
+      position: relative;
+      margin-top: 50px;
+      padding: 20px;
+      background: linear-gradient(45deg, #7455F0, #FF2AC2);
+      color: #fff;
+      font-size: 50px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .cursor {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 40px;
+      background-color: #FFF;
+      animation: cursor-blink 0.7s infinite;
+      z-index: 1;
+      margin-left: 5px; /* Adjust the left position of the cursor */
+    }
+
+    .fade-in-element {
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+
+    @keyframes cursor-blink {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes box-anim {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes twinkling {
+      0% {
+        transform: scale(1);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="/index" class="navbar-brand">Navation AI</a>
+      <ul class="navbar-nav">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+    </nav>
+    <div class="box fade-in-element">
+      <span id="text"></span>
+      <span class="cursor"></span>
+    </div>
+    <h1 class="fade-in-element">Welcome to the AI World!</h1>
+    <p class="fade-in-element">Explore the limitless possibilities of artificial intelligence.</p>
+    <a href="/about" class="button fade-in-element">About Us</a>
+    <div class="image-container fade-in-element">
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.fade-in-element');
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.animationDelay = i * 0.2 + 's';
+      }
+
+      const textElement = document.getElementById('text');
+      const text = "We are an Artificial Intelligence company.";
+      let currentIndex = 0;
+
+      function typeText() {
+        if (currentIndex < text.length) {
+          textElement.textContent += text.charAt(currentIndex);
+          currentIndex++;
+          updateCursorPosition();
+          setTimeout(typeText, 100);
+        } else {
+          setTimeout(eraseText, 300);
+        }
+      }
+
+      function eraseText() {
+        if (currentIndex >= 0) {
+          textElement.textContent = text.substring(0, currentIndex);
+          currentIndex--;
+          updateCursorPosition();
+          setTimeout(eraseText, 100);
+        } else {
+          currentIndex = 0;
+          typeText();
+        }
+      }
+
+      function updateCursorPosition() {
+        const textWidth = textElement.clientWidth;
+        const marginLeft = textWidth + 4; /* Adjust the left position of the cursor */
+        const cursorElement = document.querySelector('.cursor');
+        cursorElement.style.marginLeft = `${marginLeft}px`;
+      }
+
+      typeText();
+    });
+  </script>
+</body>
+</html>

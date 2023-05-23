@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navation AI - About</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #191A2A;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar-nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-nav li {
+      margin-left: 20px;
+    }
+
+    .navbar-nav li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav li a:hover {
+      color: #FF2AC2;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #FF2AC2;
+      margin-top: 0;
+    }
+
+    .about-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .about-info {
+      flex: 1 1 600px;
+      background-color: #292C40;
+      padding: 40px;
+      border-radius: 4px;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .about-info:hover {
+      background-color: #3C4059;
+    }
+
+    .about-info h2 {
+      font-size: 24px;
+      color: #FF2AC2;
+      margin-top: 0;
+      transition: color 0.3s ease;
+    }
+
+    .about-info:hover h2 {
+      color: #FF2AC2;
+    }
+
+    .about-info p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    .about-info:hover p {
+      color: #fff;
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      margin-left: 50px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .fade-in-element {
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="/index" class="navbar-brand">Navation AI</a>
+      <ul class="navbar-nav">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+    </nav>
+    <h1>About Us</h1>
+    <div class="about-content fade-in-element">
+      <div class="about-info">
+        <h2 style="color: #FF2AC2;">Who We Are</h2>
+        <p>We are an innovative AI company dedicated to providing cutting-edge solutions that leverage the power of artificial intelligence and machine learning. Our team of experts is passionate about pushing the boundaries of AI technology to solve complex problems and drive digital transformation.</p>
+        <p>With a strong focus on research and development, we strive to stay at the forefront of the AI field, constantly exploring new possibilities and refining our approaches. Our goal is to empower businesses and individuals with intelligent solutions that improve efficiency, enhance decision-making, and unlock new opportunities.</p>
+      </div>
+      <div class="about-image">
+        <img src="about.jpg" alt="About Image" width="500" height="400">
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.fade-in-element');
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.animationDelay = i * 0.2 + 's';
+      }
+    });
+  </script>
+</body>
+</html>
